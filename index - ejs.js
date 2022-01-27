@@ -5,11 +5,12 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req,res) => {
 
+   console.log('I am here for Home');
     res.render('pages/home');
 });
 app.get('/about', (req,res) => {
 
-    res.render('pages/about');
+   res.render('pages/about');
 });
 
 
