@@ -28,21 +28,24 @@ const app = express();
 //     index:home.html
 // }));
 
-const router = express.Router({
-    caseSensitive:true,   
-});
-app.use(router);
+//express.Router([options])
+//Case Sensitive
+// const router = express.Router({
+//     caseSensitive:true,   
+// });
+// app.use(router);
+// router.get('/about', (req,res) => {
+//     console.log(req.body);
+//     res.send('This is About from GET request');
+// });
+
+
 
 
 app.get('/', (req,res) => {
     console.log(req.body);
     res.send('This is Homepage from GET request');
 });
-router.get('/about', (req,res) => {
-    console.log(req.body);
-    res.send('This is About from GET request');
-});
-
 app.post('/', (req,res) => {
     console.log(req.body);
     res.send(`This is homepage from POST Request and response is ${req.body.name}`);
